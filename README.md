@@ -1,4 +1,5 @@
 Made with :heart: in Malaga (!important! information).
+
 # HTML FORM validator
 
 Respecting the architecture **MODEL - VIEW - CONTROLLER**, this project allows to validate the fields of a web form using regular expressions.
@@ -21,10 +22,10 @@ Karma will take care of the rest and show you by console the results.
 
 ## HOW TO IMPLEMENT
 Either you want to implement an existing form, or you want to create one from scratch ...
-
+Imagine that we want to validate an input **"Name"**
 1. In the html, add next to the field to validate the following elements
 ```html
- \<i id="[NameYouWant]Status" class="">\</i>  
+ <i id="nameStatus" class=""></i>  
  ```
 
 (In this element will show if the entry is valid or not).&nbsp;&nbsp;
@@ -36,8 +37,8 @@ And in the input itself, add the following html attribute:
 
 2. Add the following lines in FORMVIEW (in regexp.constants.js):
   ```js
-  [NameYouWant]_FIELD : '[id_input_element_in_html]',
-  [NameYouWant]_STATUS : '[id_status_element_in_html]',
+  NAME_FIELD : '<id_input_element_in_html>',
+  NAME_STATUS : '<id_status_element_in_html>',
   ```
   
 and create the regulated expression within REGEXP following the following example:
@@ -48,8 +49,8 @@ and create the regulated expression within REGEXP following the following exampl
 &nbsp;
 3. Add the following lines within regExpService:
 ```js
-function isValid[Name]([Name]) {
-    return REGEXP.[expresion_to_test].test([Name]);
+function isValidName(name) {
+    return REGEXP.NAME.test(name);
 }
   ```
 
