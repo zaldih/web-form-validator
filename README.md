@@ -71,7 +71,7 @@ function isValidName(name) {
 
 * [/services/regExService.js](): Service that is responsible for validating input parameters with regular expressions.
 
-* [/controllers/regExController.js](): Controller that interacts with the view to modify certain elements (such as the validation check).
+* [/controllers/regExController.js](): Controller that interacts with the view to modify certain elements (such as validation) and will use the services to validate them.
 
 * [/test/regExpServiceSpect.js](): Contains a unit test battery from Jasmine that tests the service.
 
