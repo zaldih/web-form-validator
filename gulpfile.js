@@ -6,12 +6,14 @@ const htmlmin = require('gulp-htmlmin');
 const useref = require('gulp-useref');
 const autoprefixer = require('gulp-autoprefixer');
 const livereload = require('gulp-livereload');
+const browserSync = require('browser-sync').create();
 
 
 gulp.task('minify', () => {
     gulp.src(['app.js', 'test/*.js', 'services/*.js', 'controllers/*.js', 'constants/*.js', 'assets/*.js'])
         .pipe(minify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('autoprefixer', () => {
@@ -22,26 +24,31 @@ gulp.task('autoprefixer', () => {
         }))
         .pipe(purify(['.html']))
         .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('imagemin', () => {
     gulp.src('assets/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/images'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('useref', () => {
     gulp.src('*.html')
         .pipe(useref())
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('dist/html'));
+        .pipe(gulp.dest('dist/html'))
+        .pipe(browserSync.stream());
 });
 
 
 
 gulp.task('default', function() {
-    // watch for CSS changes
-    gulp.watch(['app.js', 'test/*.js', 'services/*.js', 'controllers/*.js', 'constants/*.js', 'assets/*.js'], function() {
+    browserSync.init({
+        server: "./"
+    });
+    gulp.watch(['form.html', 'app.js', 'test/*.js', 'services/*.js', 'controllers/*.js', 'constants/*.js', 'assets/*.js'], () => {
        gulp.run('minify');
        gulp.run('autoprefixer');
        gulp.run('imagemin');
