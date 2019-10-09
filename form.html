@@ -1,71 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" , initial-scale="1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" , initial-scale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Form Validator sample</title>
-    <link rel="stylesheet" type="text/css" href="./assets/styles/prac0.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/prac0.css" />
+  </head>
 
-<body>
+  <body>
     <div id="daw-regexp">
-        <h1>AWWWESOME SAMPLE FORM</h1>
-        <form class="all-form">
-            <div class="form-group">
-                <label class="label-group" for="name">Nombre </label><i id="nameStatus" class=""></i>
-                <input type="text" name="name" class="form-control" id="exampleInputName" oninput="regExpController.validateName()"
-                    placeholder="Name">
-            </div><br>
-            <div class=" form-group">
-                <label class="label-group" for="surname">Apellido </label><i id="surnameStatus" class=""></i>
-                <input type="text" name="surname" class="form-control" id="exampleInputSurname" oninput="regExpController.validateSurname()"
-                    placeholder="Surname">
-            </div><br>
-            <div class="form-group">
-                <label class="label-group">Email </label><i id="emailStatus" class=""></i>
-                <input type="email" class="form-control" id="exampleInputEmail" oninput="regExpController.validateEmail()"
-                    placeholder="Email">
-            </div><br>
-            <div class="form-group">
-                <label class="label-group">Edad </label><i id="ageStatus" class=""></i>
-                <input type="text" class="form-control" id="exampleInputAge" oninput="regExpController.validateAge()"
-                    placeholder="Age">
-            </div><br>
-            <div class="form-group">
-                <label class="label-group">Pais </label><i id="countryStatus" class=""></i>
-                <select id="exampleInputCountry" onchange="">
-                    <option value="Spain">Spain</option>
-                    <option value="EEUU">EEUU</option>
-                </select>
-            </div><br>
-            <div class="form-conditional">
-                <label class="label-group">Código postal </label><i id="postCodeStatus" class=""></i>
-                <input type="text" class="form-control" id="exampleInputPostlCode" oninput="regExpController.validatePostcod()"
-                    placeholder="Postal code">
-                <br><br>
+      <h1>AWWWESOME SAMPLE FORM</h1>
+      <form class="all-form">
+        <div class="left-side">
+          <div class="form-group">
+            <label class="label-group" for="name"
+              >Nombre <i id="nameStatus" class=""></i
+            ></label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="exampleInputName"
+              oninput="regExpController.validateName()"
+              placeholder="Name"
+            />
+          </div>
 
-                <label class="label-group">Fecha de nacimiento </label><i id="bornAgeStatus" class=""></i>
-                <input type="text" class="form-control" id="exampleInputBornDate" oninput="regExpController.validateBornage()"
-                    placeholder="Born date">
-                <br><br>
+          <div class="form-group">
+            <label class="label-group" for="surname"
+              >Apellido <i id="surnameStatus" class=""></i
+            ></label>
+            <input
+              type="text"
+              name="surname"
+              class="form-control"
+              id="exampleInputSurname"
+              oninput="regExpController.validateSurname()"
+              placeholder="Surname"
+            />
+          </div>
+          <div class="form-group">
+            <label class="label-group"
+              >Email <i id="emailStatus" class=""></i
+            ></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail"
+              oninput="regExpController.validateEmail()"
+              placeholder="Email"
+            />
+          </div>
+          <div class="form-group">
+            <label class="label-group"
+              >Edad <i id="ageStatus" class=""></i
+            ></label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputAge"
+              oninput="regExpController.validateAge()"
+              placeholder="Age"
+            />
+          </div>
+          <div class="form-group">
+            <label class="label-group"
+              >Pais <i id="countryStatus" class=""></i
+            ></label>
+            <select id="exampleInputCountry" onchange="">
+              <option value="Spain">Spain</option>
+              <option value="EEUU">EEUU</option>
+            </select>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="form-group">
+            <label class="label-group"
+              >Código postal <i id="postCodeStatus" class=""></i
+            ></label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputPostlCode"
+              oninput="regExpController.validatePostcod()"
+              placeholder="Postal code"
+            />
+          </div>
 
-                <label class="label-group">Teléfono </label><i id="PhoneStatus" class=""></i>
-                <input type="text" class="form-control" id="exampleInputPhoneNumber" oninput="regExpController.validatePhone()"
-                    placeholder="Phone number">
-            </div><br>
+          <div class="form-group">
+            <label class="label-group"
+              >Fecha de nacimiento <i id="bornAgeStatus" class=""></i
+            ></label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputBornDate"
+              oninput="regExpController.validateBornage()"
+              placeholder="Born date"
+            />
+          </div>
 
-            <button type="submit" class="btn-submit">Enviar/Submit </button>
-        </form>
+          <div class="form-group">
+            <label class="label-group"
+              >Teléfono <i id="PhoneStatus" class=""></i
+            ></label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputPhoneNumber"
+              oninput="regExpController.validatePhone()"
+              placeholder="Phone number"
+            />
+          </div>
+          <button type="submit" class="btn-submit">Enviar/Submit</button>
+        </div>
+      </form>
     </div>
-</body>
-<script src="./constants/regexp.constants.js"></script>
-<script src="./services/regExService.js"></script>
-<script src="./controllers/regExController.js"></script>
-<script src="./app.js"></script>
 
-
+    <footer>
+      This project is licensed under the MIT License. See the documention
+      <a href="https://github.com/zaldih/web-form-validator" target="_blank"
+        >here</a
+      >
+    </footer>
+  </body>
+  <script src="./constants/regexp.constants.js"></script>
+  <script src="./services/regExService.js"></script>
+  <script src="./controllers/regExController.js"></script>
+  <script src="./app.js"></script>
 </html>
