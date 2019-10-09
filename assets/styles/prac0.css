@@ -2,11 +2,38 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  display: flex;
+  height: 97vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.left-side {
+  margin-right: 50px;
+}
+
+.all-form {
+  display: inline-flex;
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
 .form-control {
-  margin-top: 1.5%;
+  margin-top: 4px;
   /*  width: 50%; */
   padding: 2px;
   width: 150px;
+  display: flex;
 }
 
 .label-group {
@@ -14,24 +41,13 @@
   font-size: 1.3rem; /* rem */
 }
 
-.all-form {
-  width: 150px;
-  margin: 0;
-  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-  -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
-  box-sizing: border-box;
-}
-
-.form-conditional {
-  width: 172px;
-  margin-left: 155%;
-  margin-top: -208%;
-}
-
 .btn-submit {
-  margin-left: 160%;
-  margin-top: 15.5%;
-  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 19px;
+  border-radius: 10px;
   font-size: 110%;
-  background-color: #45ae45;
+  background-color: #d4eed2;
+  border: 1px solid #808080c4;
 }
