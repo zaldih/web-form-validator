@@ -1,4 +1,4 @@
-Made with :heart: in Malaga (!important! information).
+Made with :heart: in Malaga.
 
 # HTML FORM validator
 
@@ -11,7 +11,7 @@ It is not necessary to install any dependencies for the deployment, unless you w
 > npm i
 
 ### RUNNING
-Just open the example form **./Form.html** in a browser.
+Just open the example form **./Index.html** in a browser. (or run **npm run start**)
 
 ### Running the tests
 The project contains a test battery that verifies that the validation service works as it should work. The tests are within the wonderful **"test" directory**.
