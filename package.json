@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "http-serve . -p 8080 -o",
     "test": "karma start"
   },
   "author": "",
@@ -16,6 +17,7 @@
     "jasmine-core": "^3.2.1",
     "karma-coverage": "^1.1.2",
     "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^1.1.2"
+    "karma-jasmine": "^1.1.2",
+    "http-serve": "^1.0.1"
   }
 }
