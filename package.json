@@ -8,7 +8,7 @@
     "test": "karma start"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "jasmine": "^3.2.0",
     "karma": "^3.0.0",
